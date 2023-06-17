@@ -19,6 +19,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
+	implementation group: 'javax.validation', name: 'validation-api', version: '2.0.1.Final'
 }
 
 tasks.named('test') {
