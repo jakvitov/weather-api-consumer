@@ -2,11 +2,14 @@ package cz.jakvitov.weatherapiconsumer.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Dto representing hourly units in Weather response
  */
 public class HourlyUnitsDto {
 
+    @NotNull
     private String time;
 
     @JsonProperty("temperature_2m")
