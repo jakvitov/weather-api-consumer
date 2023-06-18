@@ -1,5 +1,6 @@
 package cz.jakvitov.weatherapiconsumer.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import reactor.util.annotation.NonNull;
 
 import javax.validation.Valid;
@@ -12,27 +13,28 @@ public class TwoDaysWeatherResponseDto extends AbstractOpenMeteoWeatherResponse{
 
     @NotNull
     @Valid
-    private HourlyUnitsDto hourlyUnitsDto;
+    @JsonProperty("hourly_units")
+    private HourlyUnitsDto hourlyUnits;
 
     @NotNull
-    private HourlyInformationDto hourlyInformationDto;
+    private HourlyInformationDto hourly;
 
     public TwoDaysWeatherResponseDto() {
     }
 
-    public HourlyUnitsDto getHourlyUnitsDto() {
-        return hourlyUnitsDto;
+    public HourlyUnitsDto getHourlyUnits() {
+        return hourlyUnits;
     }
 
-    public void setHourlyUnitsDto(HourlyUnitsDto hourlyUnitsDto) {
-        this.hourlyUnitsDto = hourlyUnitsDto;
+    public void setHourlyUnits(HourlyUnitsDto hourlyUnits) {
+        this.hourlyUnits = hourlyUnits;
     }
 
-    public HourlyInformationDto getHourlyInformationDto() {
-        return hourlyInformationDto;
+    public HourlyInformationDto getHourly() {
+        return hourly;
     }
 
-    public void setHourlyInformationDto(HourlyInformationDto hourlyInformationDto) {
-        this.hourlyInformationDto = hourlyInformationDto;
+    public void setHourly(HourlyInformationDto hourly) {
+        this.hourly = hourly;
     }
 }

@@ -1,6 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.cglib.core.Local;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
