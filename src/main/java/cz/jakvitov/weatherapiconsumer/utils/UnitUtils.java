@@ -1,4 +1,6 @@
-package cz.jakvitov.weatherapiconsumer.types;
+package cz.jakvitov.weatherapiconsumer.utils;
+
+import cz.jakvitov.weatherapiconsumer.types.Units;
 
 public class UnitUtils {
 
