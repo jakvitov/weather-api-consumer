@@ -47,7 +47,7 @@ public enum WeatherCode {
     final Integer value;
     final String translation;
 
-    public WeatherCode numberToWeatherCode(Integer num){
+    public static WeatherCode numberToWeatherCode(Integer num){
         return stream(WeatherCode.values()).filter((code) ->
             code.getValue().equals(num)
         ).findFirst().orElseThrow(() -> new NumberCodeNotFoundException(num));

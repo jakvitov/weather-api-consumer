@@ -2,6 +2,7 @@ package cz.jakvitov.weatherapiconsumer.utils;
 
 
 import cz.jakvitov.weatherapiconsumer.types.WeatherOptions;
+import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Arrays;
