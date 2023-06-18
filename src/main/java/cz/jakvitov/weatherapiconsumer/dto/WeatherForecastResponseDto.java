@@ -1,7 +1,6 @@
 package cz.jakvitov.weatherapiconsumer.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import reactor.util.annotation.NonNull;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -9,7 +8,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Entity representing a standard hourly weather forecast response with two days forecast
  */
-public class TwoDaysWeatherResponseDto extends AbstractOpenMeteoWeatherResponse{
+public class WeatherForecastResponseDto extends AbstractOpenMeteoWeatherResponse{
 
     @NotNull
     @Valid
@@ -19,7 +18,7 @@ public class TwoDaysWeatherResponseDto extends AbstractOpenMeteoWeatherResponse{
     @NotNull
     private HourlyInformationDto hourly;
 
-    public TwoDaysWeatherResponseDto() {
+    public WeatherForecastResponseDto() {
     }
 
     public HourlyUnitsDto getHourlyUnits() {
