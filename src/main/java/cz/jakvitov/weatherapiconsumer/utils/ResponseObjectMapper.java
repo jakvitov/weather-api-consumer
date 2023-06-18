@@ -16,10 +16,10 @@ public class ResponseObjectMapper {
     public WeatherForecastResponseDto openMeteoDtoToWeatherForecastResponseDto(OpenMeteoWeatherForecastResponseDto openMeteoWeatherForecastResponseDto){
         WeatherForecastResponseDto weatherForecastResponseDto = new WeatherForecastResponseDto();
         weatherForecastResponseDto.setDaysForecast(new ArrayList<WeatherInfoForDayDto>());
-        for (int i = 0; i < openMeteoWeatherForecastResponseDto.getHourly().getTime().size()/24; i += 24){
+        for (int i = 0; i < openMeteoWeatherForecastResponseDto.getHourly().getTime().size(); i += 24){
             int endOfTheDayIndex = i + 24;
             WeatherInfoForDayDto weatherInfoForDayDto = new WeatherInfoForDayDto();
-            weatherInfoForDayDto.setDate(openMeteoWeatherForecastResponseDto.getHourly().getTime().get(0).toLocalDate());
+            weatherInfoForDayDto.setDate(openMeteoWeatherForecastResponseDto.getHourly().getTime().get(i).toLocalDate());
             weatherInfoForDayDto.setHourlyInfo(new ArrayList<WeatherInfoForHourInfoDto>(24));
             for (int k = i; k < endOfTheDayIndex; k ++){
                 WeatherInfoForHourInfoDto weatherInfoForHourInfoDto = new WeatherInfoForHourInfoDto();
