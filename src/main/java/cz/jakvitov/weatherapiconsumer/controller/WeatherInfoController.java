@@ -1,7 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.controller;
 
 import cz.jakvitov.weatherapiconsumer.client.WeatherApiService;
-import cz.jakvitov.weatherapiconsumer.dto.WeatherForecastResponseDto;
+import cz.jakvitov.weatherapiconsumer.dto.open_meteo.OpenMeteoWeatherForecastResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ public class WeatherInfoController {
 
     //Custom forecast length
     @GetMapping("/getForecast")
-    public Mono<WeatherForecastResponseDto> customDaysWeatherResponse(@RequestParam("latitude") Double latitude, @RequestParam("longitude") Double longitude, @RequestParam Integer days){
+    public Mono<OpenMeteoWeatherForecastResponseDto> customDaysWeatherResponse(@RequestParam("latitude") Double latitude, @RequestParam("longitude") Double longitude, @RequestParam Integer days){
         if (days == null){
             days = 2;
         }

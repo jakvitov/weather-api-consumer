@@ -1,4 +1,4 @@
-package cz.jakvitov.weatherapiconsumer.dto;
+package cz.jakvitov.weatherapiconsumer.dto.open_meteo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -6,9 +6,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 /**
- * Entity representing a standard hourly weather forecast response with two days forecast
+ * Entity representing a standard hourly weather forecast response with forecast from third party weather service
  */
-public class WeatherForecastResponseDto extends AbstractOpenMeteoWeatherResponse{
+public class OpenMeteoWeatherForecastResponseDto extends AbstractOpenMeteoWeatherResponse {
 
     @NotNull
     @Valid
@@ -18,7 +18,7 @@ public class WeatherForecastResponseDto extends AbstractOpenMeteoWeatherResponse
     @NotNull
     private HourlyInformationDto hourly;
 
-    public WeatherForecastResponseDto() {
+    public OpenMeteoWeatherForecastResponseDto() {
     }
 
     public HourlyUnitsDto getHourlyUnits() {

@@ -1,4 +1,4 @@
-package cz.jakvitov.weatherapiconsumer.dto;
+package cz.jakvitov.weatherapiconsumer.dto.open_meteo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.cglib.core.Local;

@@ -1,6 +1,6 @@
 package cz.jakvitov.weatherapiconsumer.client;
 
-import cz.jakvitov.weatherapiconsumer.dto.WeatherForecastResponseDto;
+import cz.jakvitov.weatherapiconsumer.dto.open_meteo.OpenMeteoWeatherForecastResponseDto;
 import cz.jakvitov.weatherapiconsumer.utils.WeatherUriBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,12 +16,9 @@ public class WeatherApiService {
     @Autowired
     private WebClient webClient;
 
-    public Mono<WeatherForecastResponseDto> getHourlyTwoDaysWeatherForecast(Double latitude, Double longitude){
-        return webClient.get().uri(weatherUriBuilder.buildDailyForecastGetRequestUri(latitude, longitude, 2)).retrieve().bodyToMono(WeatherForecastResponseDto.class);
-    }
 
-    public Mono<WeatherForecastResponseDto> getHourlyTwoDaysWeatherForecast(Double latitude, Double longitude, Integer days){
-        return webClient.get().uri(weatherUriBuilder.buildDailyForecastGetRequestUri(latitude, longitude, days)).retrieve().bodyToMono(WeatherForecastResponseDto.class);
+    public Mono<OpenMeteoWeatherForecastResponseDto> getHourlyTwoDaysWeatherForecast(Double latitude, Double longitude, Integer days){
+        return webClient.get().uri(weatherUriBuilder.buildDailyForecastGetRequestUri(latitude, longitude, days)).retrieve().bodyToMono(OpenMeteoWeatherForecastResponseDto.class);
     }
 
 
