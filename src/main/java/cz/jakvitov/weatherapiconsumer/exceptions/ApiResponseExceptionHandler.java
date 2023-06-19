@@ -19,4 +19,14 @@ public class ApiResponseExceptionHandler {
         return new ResponseEntity<>(new ErrorResponseDto(exc.getMessage()), HttpStatusCode.valueOf(503));
     }
 
+    @ExceptionHandler(NumberCodeNotFoundException.class)
+    public ResponseEntity<ErrorResponseDto> handleDtoErrorException(NumberCodeNotFoundException exc){
+        return new ResponseEntity<>(new ErrorResponseDto(exc.getMessage()), HttpStatusCode.valueOf(500));
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponseDto> handleGeneralException(Exception exc){
+        return  new ResponseEntity<>(new ErrorResponseDto(exc.getMessage()), HttpStatusCode.valueOf(500));
+    }
+
 }
