@@ -1,8 +1,8 @@
 package cz.jakvitov.weatherapiconsumer.dto.open_meteo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotNull;
 
-import javax.validation.constraints.NotNull;
 
 /**
  * Dto representing hourly units in Weather response

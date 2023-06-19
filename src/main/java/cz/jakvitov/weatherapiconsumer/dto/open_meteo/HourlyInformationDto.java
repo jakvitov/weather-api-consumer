@@ -1,9 +1,8 @@
 package cz.jakvitov.weatherapiconsumer.dto.open_meteo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.springframework.cglib.core.Local;
+import jakarta.validation.constraints.NotNull;
 
-import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 

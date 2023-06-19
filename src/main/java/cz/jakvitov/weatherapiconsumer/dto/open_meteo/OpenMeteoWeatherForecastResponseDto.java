@@ -1,9 +1,9 @@
 package cz.jakvitov.weatherapiconsumer.dto.open_meteo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 /**
  * Entity representing a standard hourly weather forecast response with forecast from third party weather service
