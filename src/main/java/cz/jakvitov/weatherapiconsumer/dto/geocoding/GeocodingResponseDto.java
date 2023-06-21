@@ -1,5 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.dto.geocoding;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotNull;
 
 import java.util.ArrayList;
@@ -10,16 +12,17 @@ import java.util.ArrayList;
 public class GeocodingResponseDto {
 
     @NotNull
-    private ArrayList<GeocodingCityInfoDto> geocodingCityInfoDtos;
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+    private ArrayList<GeocodingCityInfoDto> cities;
 
     public GeocodingResponseDto() {
     }
 
-    public ArrayList<GeocodingCityInfoDto> getGeocodingCityInfoDtos() {
-        return geocodingCityInfoDtos;
+    public ArrayList<GeocodingCityInfoDto> getCities() {
+        return cities;
     }
 
-    public void setGeocodingCityInfoDtos(ArrayList<GeocodingCityInfoDto> geocodingCityInfoDtos) {
-        this.geocodingCityInfoDtos = geocodingCityInfoDtos;
+    public void setCities(ArrayList<GeocodingCityInfoDto> cities) {
+        this.cities = cities;
     }
 }

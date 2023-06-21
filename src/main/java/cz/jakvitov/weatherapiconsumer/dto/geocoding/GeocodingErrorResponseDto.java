@@ -7,6 +7,8 @@ public class GeocodingErrorResponseDto {
 
     private String message;
 
+    private String error;
+
     public GeocodingErrorResponseDto() {
     }
 
@@ -20,5 +22,13 @@ public class GeocodingErrorResponseDto {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getError() {
+        return error;
+    }
+
+    public void setError(String error) {
+        this.error = error;
     }
 }

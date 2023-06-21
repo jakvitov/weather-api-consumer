@@ -5,6 +5,6 @@ import cz.jakvitov.weatherapiconsumer.dto.geocoding.GeocodingErrorResponseDto;
 public class GeocodingApiException extends RuntimeException{
 
     public GeocodingApiException(GeocodingErrorResponseDto geocodingErrorResponseDto) {
-        super(geocodingErrorResponseDto.getMessage());
+        super(geocodingErrorResponseDto.getMessage() + geocodingErrorResponseDto.getError());
     }
 }
