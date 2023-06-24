@@ -1,7 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.client;
 
-import cz.jakvitov.weatherapiconsumer.dto.open_meteo.OpenMeteoErrorResponseDto;
-import cz.jakvitov.weatherapiconsumer.dto.open_meteo.OpenMeteoWeatherForecastResponseDto;
+import cz.jakvitov.open_meteo.OpenMeteoErrorResponseDto;
+import cz.jakvitov.open_meteo.OpenMeteoWeatherForecastResponseDto;
 import cz.jakvitov.weatherapiconsumer.exceptions.OpenMeteoErrorResponseException;
 import cz.jakvitov.weatherapiconsumer.utils.WeatherUriBuilder;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.service;
 
+import cz.jakvitov.controller_response.WeatherForecastResponseDto;
 import cz.jakvitov.weatherapiconsumer.client.WeatherApiService;
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherForecastResponseDto;
 import cz.jakvitov.weatherapiconsumer.utils.ResponseObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

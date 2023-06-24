@@ -1,6 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.service;
 
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherForecastResponseDto;
+
+import cz.jakvitov.controller_response.WeatherForecastResponseDto;
 import reactor.core.publisher.Mono;
 
 public interface OpenMeteoService {

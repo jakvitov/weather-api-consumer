@@ -1,6 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.exceptions;
 
-import cz.jakvitov.weatherapiconsumer.dto.geocoding.GeocodingErrorResponseDto;
+
+import cz.jakvitov.geocoding.GeocodingErrorResponseDto;
 
 public class GeocodingApiException extends RuntimeException{
 

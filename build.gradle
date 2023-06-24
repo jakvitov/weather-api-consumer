@@ -8,19 +8,28 @@ group = 'cz.jakvitov'
 version = '0.1.0'
 
 java {
-	sourceCompatibility = '17'
+	sourceCompatibility = '18'
 }
 
 repositories {
+	maven {
+		name = "GitHubPackages"
+		url = uri("https://maven.pkg.github.com/jakvitov/weather-dto")
+		credentials {
+			username = project.findProperty("gpr.user") ?: "jakvitov"
+			password = project.findProperty("gpr.key") ?: System.getenv("GIT_PUBLISH_TOKEN")
+		}
+	}
 	mavenCentral()
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+	implementation "cz.jakvitov:weather-dto:1.0"
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webflux-ui', version: '2.0.0'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '3.1.0'
+	implementation group: 'jakarta.validation', name: 'jakarta.validation-api', version: '3.0.2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'io.projectreactor:reactor-test'
 }
 

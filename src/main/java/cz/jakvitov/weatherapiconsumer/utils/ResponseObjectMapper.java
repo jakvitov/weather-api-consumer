@@ -1,10 +1,11 @@
 package cz.jakvitov.weatherapiconsumer.utils;
 
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherForecastResponseDto;
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherInfoForDayDto;
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherInfoForHourInfoDto;
-import cz.jakvitov.weatherapiconsumer.dto.open_meteo.OpenMeteoWeatherForecastResponseDto;
-import cz.jakvitov.weatherapiconsumer.types.WeatherCode;
+
+import cz.jakvitov.controller_response.WeatherForecastResponseDto;
+import cz.jakvitov.controller_response.WeatherInfoForDayDto;
+import cz.jakvitov.controller_response.WeatherInfoForHourInfoDto;
+import cz.jakvitov.open_meteo.OpenMeteoWeatherForecastResponseDto;
+import cz.jakvitov.types.WeatherCode;
 
 import java.util.ArrayList;
 

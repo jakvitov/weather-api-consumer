@@ -1,8 +1,7 @@
 package cz.jakvitov.weatherapiconsumer.exceptions;
 
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.ErrorResponseDto;
-import cz.jakvitov.weatherapiconsumer.dto.geocoding.GeocodingResponseDto;
-import io.micrometer.core.ipc.http.HttpSender;
+import cz.jakvitov.controller_response.ErrorResponseDto;
+import cz.jakvitov.exceptions.NumberCodeNotFoundException;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -1,6 +1,6 @@
 package cz.jakvitov.weatherapiconsumer.controller;
 
-import cz.jakvitov.weatherapiconsumer.dto.controller_response.WeatherForecastResponseDto;
+import cz.jakvitov.controller_response.WeatherForecastResponseDto;
 import cz.jakvitov.weatherapiconsumer.service.OpenMeteoService;
 import cz.jakvitov.weatherapiconsumer.service.WeatherByCityService;
 import org.springframework.beans.factory.annotation.Autowired;
