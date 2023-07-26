@@ -37,4 +37,17 @@ public class GeocodingApiService {
                 });
     }
 
+    public Mono<GeocodingResponseDto> translateCityNameToGeocoding(String city, String countryIso){
+        ObjectMapper objectMapper = new ObjectMapper();
+        return webClient.get().uri("https://api.api-ninjas.com/v1/geocoding?city=" + city + "&country=" + countryIso)
+                .header("X-Api-Key", System.getenv("API_NINJAS_KEY")).retrieve()
+                .onStatus(HttpStatusCode::isError, response -> response.bodyToMono(GeocodingErrorResponseDto.class)
+                        .flatMap((res) -> Mono.error(new GeocodingApiException(res))))
+                .bodyToMono(new ParameterizedTypeReference<ArrayList<GeocodingCityInfoDto>>() {}).map((resList) -> {
+                    GeocodingResponseDto geocodingResponseDto = new GeocodingResponseDto();
+                    geocodingResponseDto.setCities(resList);
+                    return geocodingResponseDto;
+                });
+    }
+
 }
