@@ -18,8 +18,8 @@ public class WeatherTranslationController {
     @Autowired
     private GeocodingApiService geocodingApiService;
 
-    @GetMapping("/translate/namesToGeocodes")
-    public Mono<ResponseEntity<GeocodingResponseDto>> getGeocodesForCityByName(@RequestParam(value = "city", required = true) String city, @RequestParam(value = "countryIso", required = true) String countryISO){
+    @GetMapping("namesToGeocodes")
+    public Mono<ResponseEntity<GeocodingResponseDto>> getGeocodesForCityByName(@RequestParam(value = "city", required = true) String city, @RequestParam(value = "countryISO", required = true) String countryISO){
         return geocodingApiService.translateCityNameToGeocoding(city).map((resp) ->
                 new ResponseEntity<>(resp, HttpStatusCode.valueOf(200))
         );
